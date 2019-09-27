@@ -1,11 +1,6 @@
 pipeline{
   agent any
   stages{
-    stage('pull'){
-      steps{
-        sh "git clone https://github.com/ArijitNandi101/TicTacToe.git"
-      }
-    }
     stage('build'){
       steps{
         sh "python TicTacToe/TicTacToe/src/ArijitNandi/TicTacToe/build.py"
@@ -18,7 +13,7 @@ pipeline{
     }
     stage('end'){
       steps{
-        sh "rm -rf TicTacToe"
+        sh "rm -rf TicTacToe*"
       }
     }
   }
