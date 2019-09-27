@@ -20,5 +20,6 @@ pipeline{
       steps{
         sh "rm -rf TicTacToe"
       }
+    }
   }
 }
