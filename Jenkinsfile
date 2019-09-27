@@ -8,7 +8,7 @@ pipeline{
     }
     stage('build'){
       steps{
-        sh "javac TicTacToe/TicTacToe/src/ArijitNandi/TicTacToe/TicTacToe.java"
+        sh "python TicTacToe/TicTacToe/src/ArijitNandi/TicTacToe/build.py"
       }
     }
     stage('run'){
