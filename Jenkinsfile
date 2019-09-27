@@ -10,7 +10,7 @@ pipeline{
     }
     stage('run'){
       steps{
-        sh "cd TicTacToe/src/ArijitNandi/TicTacToe/ && java TicTacToe"
+        sh "cd TicTacToe/src/ArijitNandi/TicTacToe/ && pwd"
       }
     }
     stage('end'){
