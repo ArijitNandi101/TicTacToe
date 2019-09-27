@@ -3,7 +3,9 @@ pipeline{
   stages{
     stage('build'){
       steps{
-        sh "python TicTacToe/src/ArijitNandi/TicTacToe/build.py"
+        sh "find -name *.java > src.txt"
+        sh "javac @src.txt"
+        echo "build succeeded"
       }
     }
     stage('run'){
@@ -13,7 +15,7 @@ pipeline{
     }
     stage('end'){
       steps{
-        sh "rm -rf TicTacToe*"
+        echo "done"
       }
     }
   }
