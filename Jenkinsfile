@@ -1,11 +1,24 @@
 pipeline{
   agent any
   stages{
+    stage('pull'){
+      steps{
+        sh "git clone https://github.com/ArijitNandi101/TicTacToe.git"
+      }
+    }
     stage('build'){
-      sh "javac TicTacToe.java"
+      steps{
+        sh "javac TicTacToe/TicTacToe/src/ArijitNandi/TicTacToe/TicTacToe.java"
+      }
     }
     stage('run'){
-      sh "java TicTacToe"
+      steps{
+        sh "java TicTacToe/TicTacToe/src/ArijitNandi/TicTacToe/TicTacToe"
+      }
     }
+    stage('end'){
+      steps{
+        sh "rm -rf TicTacToe"
+      }
   }
 }
