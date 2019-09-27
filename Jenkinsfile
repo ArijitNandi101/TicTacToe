@@ -3,12 +3,12 @@ pipeline{
   stages{
     stage('build'){
       steps{
-        sh "python TicTacToe/TicTacToe/src/ArijitNandi/TicTacToe/build.py"
+        sh "python TicTacToe/src/ArijitNandi/TicTacToe/build.py"
       }
     }
     stage('run'){
       steps{
-        sh "java TicTacToe/TicTacToe/src/ArijitNandi/TicTacToe/TicTacToe"
+        sh "java TicTacToe/src/ArijitNandi/TicTacToe/TicTacToe"
       }
     }
     stage('end'){
